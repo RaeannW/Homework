@@ -2,6 +2,15 @@
   margin: 0px;
   padding: 0px;
 }
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+    font-family: 'Times New Roman', Times, serif;
+}
 header {
   background-image: url(images/AdobeStock_596382219.jpg);
   padding-bottom: 8em;
@@ -9,6 +18,7 @@ header {
   background-repeat: no-repeat;
   background-position: center;
 }
+
 
 /* Navbar Section */
 .logo{
@@ -25,13 +35,19 @@ header {
 .nav-links {
   display: flex;
   font-size: 1.25em;
-
 }
 .nav-item {
   display: flex;
   padding: 1.5em;
 }
 
+.navbar ul a{
+  text-decoration: none;
+  color: black;
+}
+.navbar ul a:hover{
+  color: white;
+}
 
 .header-text {
   padding-left: 15%;
@@ -39,25 +55,60 @@ header {
 }
 h1 {
   font-size: 5em;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+h2 {
+  font-size: 4em;
+}
+#special{
+  font-size: 2em;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
 }
 h3 {
   font-size: 2em;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
 #header-p {
   padding-top: 1em;
   padding-right: 50%;
+  min-width: 100px;
 }
+
+@media screen and (min-width: 768px) {
+}
+
+@media screen and (max-width: 768px) {
+  #header-p{
+    min-width: 200px;
+    text-align: center;
+  }
+
+  .navbar{
+    max-width: 600px;
+  }
+}
+
 .header-button{
   margin-top: 2em;
   padding: 1em 4em;
   font-size: 1em;
   border: none;
   border-radius: 8px;
+  box-shadow: 5px 5px 5px #00000036; 
+}
+.header-button:hover {
+  background-color: #431721;
+  color: white;
 }
 
 /* Website Used As Reference for Scrolling Text-https://blog.hubspot.com/website/scrolling-text-css */
 #scroll-banner{
-  background-color: rgb(255, 170, 177);
+  background-color: #431721;
   display: flex;
   width: 100%;
   padding: 40px;
@@ -65,6 +116,11 @@ h3 {
 }
 .scroll-text{
   padding: 0 5em;
+  color: white;
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1em;
   -moz-transform: translateX(100%);
   -webkit-transform: translateX(100%);
   transform: translateX(100%);
@@ -106,8 +162,33 @@ h3 {
   width: 100%;
   padding-bottom: 30px;
 }
+
+@media only screen and (max-device-width : 1223px) and (orientation : landscape){
+  .pumpkin-content {
+    padding-left: 80px;
+    padding-top: 115px;
+  }
+}
+
 .pumpkin-content {
   padding-left: 80px;
+  /* padding-top: 115px; */
+}
+ul{
+  list-style-type: none;
+}
+.orange-button{
+  margin-top: 2em;
+  padding: 1em 4em;
+  font-size: 1em;
+  border: none;
+  border-radius: 8px;
+  background-color: #df7512;
+  color: white;
+  box-shadow: 5px 5px 5px #00000036; 
+}
+.orange-button:hover {
+  background-color: #c05d01;
 }
 
 /* Three cards with images - Recipe Section */
@@ -116,8 +197,9 @@ h3 {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 3em;
-  background-color: rgb(226, 226, 226);
+  background-color: #43172118;
   justify-content: space-around;
+  padding: 3em;
 }
 .card{
   width: 450px;
@@ -149,4 +231,32 @@ h3 {
 }
 .halloween-content{
   padding-left: 80px;
+}
+
+/* Footer Section */
+footer{
+  background-color: #431721;
+  display: flex;
+  width: 100%;
+  padding: 80px;
+  overflow: hidden;
+}
+.footer-logo {
+  display: flex;
+  width: 100px;
+  filter: invert(100%) sepia(0%) saturate(7493%) hue-rotate(345deg) brightness(102%) contrast(105%);
+}
+.navbar-footer{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.navbar-footer ul a{
+  text-decoration: none;
+  color: white;
+}
+.navbar-footer ul a:hover{
+  color: #df7512;
 }
